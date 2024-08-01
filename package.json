@@ -2,19 +2,22 @@
   "name": "my-portfolio",
   "version": "1.0.0",
   "private": true,
-  "homepage": "http://yeshwanthvarma.github.io/my-portfolio",
-  "dependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3"
-  },
+  "homepage": "https://yeshwanthvarma.github.io/my-portfolio",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "predeploy": "npm run build:legacy",
+    "deploy": "gh-pages -d build",
+    "build:legacy": "NODE_OPTIONS=--openssl-legacy-provider react-scripts build"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^4.2.2"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
   },
   "browserslist": {
     "production": [
